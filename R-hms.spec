@@ -4,7 +4,7 @@
 #
 Name     : R-hms
 Version  : 0.4.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/hms_0.4.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/hms_0.4.0.tar.gz
 Summary  : Pretty Time of Day
