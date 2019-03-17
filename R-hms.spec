@@ -4,20 +4,22 @@
 #
 Name     : R-hms
 Version  : 0.4.2
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/hms_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/hms_0.4.2.tar.gz
-Summary  : Pretty Time of Day
+Summary  : Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-pkgconfig
-Requires: R-rlang
+Requires: R-withr
 BuildRequires : R-pkgconfig
-BuildRequires : R-rlang
-BuildRequires : clr-R-helpers
+BuildRequires : R-withr
+BuildRequires : buildreq-R
 
 %description
-values, based on the 'difftime' class.
+hms
+===
+[![Travis-CI Build Status](https://travis-ci.org/tidyverse/hms.svg?branch=master)](https://travis-ci.org/tidyverse/hms) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/tidyverse/hms?branch=master&svg=true)](https://ci.appveyor.com/project/tidyverse/hms) [![codecov](https://codecov.io/gh/tidyverse/hms/branch/master/graph/badge.svg)](https://codecov.io/gh/tidyverse/hms) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/hms)](https://cran.r-project.org/package=hms)
 
 %prep
 %setup -q -c -n hms
@@ -27,11 +29,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523307987
+export SOURCE_DATE_EPOCH=1552833348
 
 %install
+export SOURCE_DATE_EPOCH=1552833348
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523307987
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -66,8 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library hms|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  hms || :
 
 
 %files
@@ -92,3 +93,22 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/hms/help/paths.rds
 /usr/lib64/R/library/hms/html/00Index.html
 /usr/lib64/R/library/hms/html/R.css
+/usr/lib64/R/library/hms/tests/testthat.R
+/usr/lib64/R/library/hms/tests/testthat/helper-compare.R
+/usr/lib64/R/library/hms/tests/testthat/helper-pillar.R
+/usr/lib64/R/library/hms/tests/testthat/out/hm.txt
+/usr/lib64/R/library/hms/tests/testthat/out/hms.txt
+/usr/lib64/R/library/hms/tests/testthat/out/hmss.txt
+/usr/lib64/R/library/hms/tests/testthat/out/ms.txt
+/usr/lib64/R/library/hms/tests/testthat/out/mss.txt
+/usr/lib64/R/library/hms/tests/testthat/test-arith.R
+/usr/lib64/R/library/hms/tests/testthat/test-coercion.R
+/usr/lib64/R/library/hms/tests/testthat/test-colformat.R
+/usr/lib64/R/library/hms/tests/testthat/test-combine.R
+/usr/lib64/R/library/hms/tests/testthat/test-construct.R
+/usr/lib64/R/library/hms/tests/testthat/test-lubridate.R
+/usr/lib64/R/library/hms/tests/testthat/test-output.R
+/usr/lib64/R/library/hms/tests/testthat/test-parse.R
+/usr/lib64/R/library/hms/tests/testthat/test-round.R
+/usr/lib64/R/library/hms/tests/testthat/test-subset.R
+/usr/lib64/R/library/hms/tests/testthat/test-update.R
