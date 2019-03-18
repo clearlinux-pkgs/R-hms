@@ -4,14 +4,16 @@
 #
 Name     : R-hms
 Version  : 0.4.2
-Release  : 35
+Release  : 36
 URL      : https://cran.r-project.org/src/contrib/hms_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/hms_0.4.2.tar.gz
 Summary  : Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-pkgconfig
-Requires: R-withr
+Requires: R-assertthat
+Requires: R-cli
+BuildRequires : R-assertthat
+BuildRequires : R-cli
 BuildRequires : R-pkgconfig
 BuildRequires : R-withr
 BuildRequires : buildreq-R
@@ -29,10 +31,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552833348
+export SOURCE_DATE_EPOCH=1552894310
 
 %install
-export SOURCE_DATE_EPOCH=1552833348
+export SOURCE_DATE_EPOCH=1552894310
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
