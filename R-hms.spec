@@ -4,7 +4,7 @@
 #
 Name     : R-hms
 Version  : 0.4.2
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/hms_0.4.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/hms_0.4.2.tar.gz
 Summary  : Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
