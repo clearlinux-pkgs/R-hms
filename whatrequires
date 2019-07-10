@@ -1,7 +1,18 @@
 # This file contains recursive sources that require this package
+R-AER
 R-DBItest
+R-RcmdrMisc
+R-VIM
+R-car
+R-drc
+R-dynlm
 R-feather
 R-haven
+R-labelled
 R-phylobase
 R-progress
+R-readODS
 R-readr
+R-rncl
+R-systemfit
+R-tidyverse
