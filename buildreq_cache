@@ -4,3 +4,4 @@ R-cli
 R-lubridate
 R-pkgconfig
 R-withr
+util-linux
