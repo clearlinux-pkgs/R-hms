@@ -4,42 +4,41 @@
 #
 Name     : R-hms
 Version  : 0.5.3
-Release  : 49
+Release  : 50
 URL      : https://cran.r-project.org/src/contrib/hms_0.5.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/hms_0.5.3.tar.gz
-Summary  : Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.
+Summary  : Pretty Time of Day
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-lubridate
 Requires: R-pkgconfig
 Requires: R-rlang
 Requires: R-vctrs
-BuildRequires : R-lubridate
 BuildRequires : R-pkgconfig
 BuildRequires : R-rlang
 BuildRequires : R-vctrs
 BuildRequires : buildreq-R
 
 %description
-# hms <a href='https:/hms.tidyverse.org'><img src='man/figures/logo.png' align="right" height="139" /></a>
+values, based on the 'difftime' class.
 
 %prep
 %setup -q -c -n hms
+cd %{_builddir}/hms
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578693881
+export SOURCE_DATE_EPOCH=1589757549
 
 %install
-export SOURCE_DATE_EPOCH=1578693881
+export SOURCE_DATE_EPOCH=1589757549
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
