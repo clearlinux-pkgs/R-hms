@@ -5,7 +5,7 @@
 #
 Name     : R-hms
 Version  : 1.1.3
-Release  : 77
+Release  : 78
 URL      : https://cran.r-project.org/src/contrib/hms_1.1.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/hms_1.1.3.tar.gz
 Summary  : Pretty Time of Day
